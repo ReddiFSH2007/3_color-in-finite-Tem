@@ -216,7 +216,6 @@ void solve(int m, int q, long long w_same, int MAX_TERMS) {
                 uint32_t end = r_ptr[i + 1];
                 uint64_t s = 0;
                 for (uint32_t p = start; p < end; ++p) {
-                    // Multiply state values by the thermal transfer matrix elements
                     s += ((uint64_t)v_in[c_idx[p]] * c_val_arr[p]);
                 }
                 v_out[i] = s % MOD;
